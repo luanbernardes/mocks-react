@@ -1,0 +1,68 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "es5"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "sourceMap": true,
+    "noEmit": true,
+    "jsx": "react",
+    "types": [
+      "vite-plugin-svgr/client",
+      "jest",
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@fixtures": ["src/@fixtures"],
+      "@fixtures/*": ["src/@fixtures/*"],
+      "@types": ["src/@types"],
+      "@types/*": ["src/@types/*"],
+      "interfaces": ["src/interfaces"],
+      "interfaces/*": ["src/interfaces/*"],
+      "modules": ["src/modules"],
+      "modules/*": ["src/modules/*"],
+      "layouts": ["src/layouts"],
+      "layouts/*": ["src/layouts/*"],
+      "services": ["src/services"],
+      "services/*": ["src/services/*"],
+      "stores": ["./src/stores"],
+      "stores/*": ["./src/stores/*"],
+      "routes": ["src/routes"],
+      "routes/*": ["src/routes/*"],
+      "hooks": ["src/hooks"],
+      "hooks/*": ["src/hooks/*"],
+      "constants/*": ["src/constants/*"],
+      "adapters": ["src/adapters"],
+      "adapters/*": ["src/adapters/*"],
+      "wrappers": ["src/wrappers"],
+      "wrappers/*": ["src/wrappers/*"]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__",
+    "**/@fixtures",
+    "**/public"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "noImplicitAny": false
+    }
+  },
+}
