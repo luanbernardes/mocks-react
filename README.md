@@ -1,6 +1,13 @@
+## Usage
+![Screenshot from 2024-03-14 20-51-11](https://github.com/luanbernardes/mocks-react/assets/12663359/b220d15e-55b9-4bba-8972-9872ae3925ef)
+- Click on the bottom left arrow to open the mock list.
+- Select all mocks that you want to intercept.
+- Reload page to apply the changes.
+- Enjoy!! All requests that are intercepted will be returned with the mock data.
+
 ## Install
 
-- Install this this package in your project  
+- Install this package in your project  
 - Add init mock service work function to intercept requests `initMockServiceWorker()` in your index, for example:
    ```
    // Init intercept requests (using service worker) to mock requests
@@ -32,14 +39,9 @@
       ```
 - Add [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
     - Create a file `mockServiceWorker.js` in the `root` from folter **public**, it need to stay in the root of your application.
-    - Add the this code in file you create `mockServiceWorker.js`: `self.importScripts('https://truepay-mocks.web.app/mockServiceWorker.js');`
+    - Add this code in file you create `mockServiceWorker.js`: `self.importScripts('https://truepay-mocks.web.app/mockServiceWorker.js');`
 - When you init your application, you can click on bottom left arrow to open the mock list. If it doesn't have a value selected, it won't be intercepted.
 
-## Usage
-- Click on the bottom left arrow to open the mock list.
-- Select all mocks that you want to intercept.
-- Reload page to apply the changes.
-- Enjoy!! All requests that are intercepted will be returned with the mock data.
 
 
 
