@@ -25,7 +25,7 @@ export function SelectMockContainer({ render, mocks }: SelectMockContainerProps)
   }
 
   return render && isSafeToRender ? (
-    <SelectMockRoot show={isBoxShow}>
+    <SelectMockRoot showcomponent={isBoxShow ? 'true' : 'false'}>
       <Icon onClick={toggleBox}>{'>'}</Icon>
 
       <SelectMockComponent mockDebugList={mocks} />

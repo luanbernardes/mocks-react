@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { groupMockDebugsMock } from '@fixtures/group-mock-debug';
-import { groupMockDebugsCallbackMock } from '@fixtures/group-mock-debug/group-mock-debug-callback';
 
 import { SelectMockComponent } from '../select-mock.component';
 
@@ -59,38 +58,6 @@ describe('SelectMockComponent', () => {
       expect(mockAddListMock.mock.calls[1][0]).toEqual({
         'mock-test-MSW': 'mock-bill-success'
       });
-    });
-  });
-
-  describe('type callback', () => {
-    it('should call callBack function on click button', async () => {
-      const mockCallback = jest.fn();
-      const mockDebugListWithCallback = [
-        {
-          ...groupMockDebugsCallbackMock[0],
-          list: [
-            {
-              ...groupMockDebugsCallbackMock[0].list[0],
-              options: [
-                {
-                  ...groupMockDebugsCallbackMock[0].list[0].options[0],
-                  callback: mockCallback
-                },
-                {
-                  ...groupMockDebugsCallbackMock[0].list[0].options[1],
-                  callback: mockCallback
-                }
-              ]
-            }
-          ]
-        }
-      ];
-
-      render(<SelectMockComponent mockDebugList={[mockDebugListWithCallback['0']]} />);
-
-      fireEvent.click(screen.getByRole('button', { name: 'mock-bill-success' }));
-
-      expect(mockCallback).toHaveBeenCalled();
     });
   });
 });

@@ -1,17 +1,19 @@
 import { styled } from 'styled-components';
 
-export const SelectMockRoot = styled('div')<{ show: boolean }>(({ show }) => ({
-  boxSizing: 'border-box',
-  position: 'fixed',
-  zIndex: 9999,
-  left: '0',
-  bottom: show ? '0' : '-600px',
-  width: '100%',
-  height: '600px',
-  backgroundColor: '#000',
-  padding: '10px',
-  color: '#fff'
-}));
+export const SelectMockRoot = styled('div')<{ showcomponent: 'true' | 'false' }>(
+  ({ showcomponent }) => ({
+    boxSizing: 'border-box',
+    position: 'fixed',
+    zIndex: 9999,
+    left: '0',
+    bottom: showcomponent === 'true' ? '0' : '-600px',
+    width: '100%',
+    height: '600px',
+    backgroundColor: '#000',
+    padding: '10px',
+    color: '#fff'
+  })
+);
 
 export const Icon = styled('div')(() => ({
   backgroundColor: '#000',
