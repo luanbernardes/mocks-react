@@ -6,9 +6,6 @@
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://us-npm.pkg.dev/truepay-tools/npm/"
-  },
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -19,8 +16,6 @@
     "dist"
   ],
   "scripts": {
-    "auth": "npx google-artifactregistry-auth --repo-config=.npmrc --credential-config=.npmrc",
-    "preinstall": "pnpm run auth",
     "prepublishOnly": "clean-package",
     "postpublish": "clean-package restore",
     "prepack": "clean-package",
@@ -46,7 +41,7 @@
     "purge": "rm -rf node_modules pnpm-lock.yaml storybook-static dist"
   },
   "keywords": [],
-  "author": "robsond.mathias@gmail.com",
+  "author": "luan.bernardes@gmail.com",
   "dependencies": {
     "@types/lodash": "^4.14.199",
     "install": "^0.13.0",
@@ -118,19 +113,5 @@
     "remove": [
       "scripts"
     ]
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "18.2.24",
-      "@types/react-dom": "18.2.8",
-      "@mui/lab": "5.0.0-alpha.146",
-      "@mui/material": "5.14.11",
-      "@mui/styles": "5.14.11",
-      "@mui/system": "5.14.11",
-      "@mui/types": "7.2.4",
-      "@mui/utils": "5.14.11",
-      "react": "18.2.0",
-      "react-dom": "18.2.0"
-    }
   }
 }
