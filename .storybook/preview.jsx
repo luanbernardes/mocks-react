@@ -1,5 +1,4 @@
 import theme from './theme';
-import { ThemeProvider } from '@emotion/react';
 
 const preview = {
   decorators: [
